@@ -10,7 +10,8 @@
         "evm": "npm run setup && bash evm.bash",
         "solana": "npm run setup && bash solana-binary-deploy.bash",
         "aptos": "npm run setup && bash aptos.bash",
-        "cleanup": "npx pm2 kill"
+        "cleanup": "npx pm2 kill",
+        "start": "yarn setup && bash start.bash && yarn evm && yarn solana && yarn wormhole"
     },
     "keywords": [],
     "author": "",

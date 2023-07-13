@@ -8,6 +8,10 @@ You will also need Docker; you can get either [Docker Desktop](https://docs.dock
 To run EVM chains you will need [Ganache](https://github.com/trufflesuite/ganache#command-line-use).  
 To run Solana chains you will need [Solana](https://docs.solana.com/cli/install-solana-cli-tools) installed. 
 
+## Setup
+Running `yarn start` will install all dependencies and run the EVM and Solana chains with the Wormhole contracts deployed.
+Make sure you have Docker running before you run this command.
+
 ## Run EVM Chains
 `yarn evm` will start up two EVM chain.
 
@@ -22,7 +26,7 @@ They'll use the standard Wormhole test mnemonic
  
  (Public Key: `0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1`, 
 
- 
+
  Private Key: (`0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d`)) 
 
 ## Run Solana Chain
@@ -35,4 +39,8 @@ They'll use the standard Wormhole test mnemonic
 ## Run Wormhole
 After you have the dependencies installed and the chains running, you can run Wormhole.
 
-Simply run `npm run wormhole` and wait while the Wormhole Guardian builds a docker image. The first time you run this command, it might take a while (up to 550 seconds on a modern laptop!). After the image is built however, it'll be relatively fast to bring it up and down. 
+Simply run `yarn wormhole` and wait while the Wormhole Guardian builds a docker image. The first time you run this command, it might take a while (up to 550 seconds on a modern laptop!). After the image is built however, it'll be relatively fast to bring it up and down. 
+
+
+## Cleanup
+To stop the chains, run `yarn cleanup`. This will stop the EVM and Solana chains, and the Wormhole Guardian.
