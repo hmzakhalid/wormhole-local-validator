@@ -3,8 +3,8 @@
 set -euo pipefail
 
 # Start EVM Chain 0
-npx pm2 delete evm0 2> /dev/null || true
-npx pm2 start 'npx ganache --accounts 11 --chain.chainId 1 -p 8545 -m "myth like bonus scare over problem client lizard pioneer submit female collect" --block-time 1' --name evm0
+npx pm2 delete evm 2> /dev/null || true
+npx pm2 start 'npx ganache --accounts 11 --chain.chainId 1 -p 8545 -m "myth like bonus scare over problem client lizard pioneer submit female collect" --block-time 1' --name evm
 
 # Start EVM Chain 1
 # npx pm2 delete evm1 2> /dev/null || true
