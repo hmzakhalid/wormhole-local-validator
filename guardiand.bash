@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # main for now (until we make a release)
-DOCKER_IMAGE="ghcr.io/wormhole-foundation/guardiand:latest"
+DOCKER_IMAGE="ghcr.io/wormhole-foundation/guardiand:v2.19.0"
 
 DOCKER_FLAGS="-p 7070:7070 -p 7071:7071 -p 6060:6060 -p 8999:8999/udp --add-host=host.docker.internal:host-gateway --platform linux/amd64"
 HOST="host.docker.internal"
