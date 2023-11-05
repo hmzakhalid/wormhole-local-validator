@@ -7,6 +7,8 @@ then
     # Install Foundry
     curl -L https://foundry.paradigm.xyz | bash
     foundryup
+    # Install Truffle and Typechain
+    npm i -g truffle typechain
     # Install Wormhole
     git clone https://github.com/wormhole-foundation/wormhole
     cd wormhole/clients/js

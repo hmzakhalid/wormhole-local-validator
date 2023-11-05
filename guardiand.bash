@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # main for now (until we make a release)
-DOCKER_IMAGE="ghcr.io/wormhole-foundation/guardiand:v2.19.0"
+DOCKER_IMAGE="ghcr.io/wormhole-foundation/guardiand:v2.23.11"
 
 DOCKER_FLAGS="-p 7070:7070 -p 7071:7071 -p 6060:6060 -p 8999:8999/udp --add-host=host.docker.internal:host-gateway --platform linux/amd64"
 HOST="host.docker.internal"
@@ -17,6 +17,8 @@ docker run --rm --name guardiand $DOCKER_FLAGS --hostname guardian-0 --cap-add=I
     --ethContract "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550" \
     --bscRPC ws://$HOST:8546 \
     --bscContract "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550" \
+    --baseRPC ws://$HOST:8546 \
+    --baseContract "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550" \
     --polygonRPC ws://$HOST:8545 \
     --avalancheRPC ws://$HOST:8545 \
     --arbitrumRPC ws://$HOST:8545 \
@@ -47,4 +49,4 @@ docker run --rm --name guardiand $DOCKER_FLAGS --hostname guardian-0 --cap-add=I
     --algorandAppID "4" \
     --aptosRPC http://$HOST:8080 \
     --aptosAccount "de0036a9600559e295d5f6802ef6f3f802f510366e0c23912b0655d972166017" \
-    --aptosHandle "0xde0036a9600559e295d5f6802ef6f3f802f510366e0c23912b0655d972166017::state::WormholeMessageHandle"
+    --aptosHandle "0xde0036a9600559e295d5f6802ef6f3f802f510366e0c23912b0655d972166017::state::WormholeMessageHandle" \

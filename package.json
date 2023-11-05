@@ -1,7 +1,7 @@
 {
-    "name": "xdapp-starter",
+    "name": "wormhole-local-validator",
     "version": "1.0.0",
-    "description": "A simple template for getting started with xDapps.",
+    "description": "Run Wormhole Guardiand Locally",
     "main": "starter.js",
     "scripts": {
         "setup": "bash setup.bash",
@@ -14,12 +14,12 @@
         "start": "yarn setup && yarn evm && yarn solana && yarn wormhole"
     },
     "keywords": [],
-    "author": "",
     "license": "MIT",
     "workspaces": [],
     "type": "module",
+    "repository": "https://github.com/hmzakhalid/wormhole-local-validator.git",
     "dependencies": {
-        "ganache": "^7.3.1",
-        "pm2": "^5.2.0"
+        "ganache": "^7.9.1",
+        "pm2": "^5.3.0"
     }
 }
